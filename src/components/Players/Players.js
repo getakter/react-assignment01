@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./Players.css";
 import Calculate from "../Calculate/Calculate";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Players = props => {
   const [users, setUsers] = useState([]);
@@ -48,7 +50,8 @@ const Players = props => {
                 <td>{user.name} </td>
                 <td>{user.email}</td>
                 <td>
-                <i class="fa fa-handshake"></i>
+                  <div className="action">
+                  {<FontAwesomeIcon icon={faCoffee} />}
                   <button
                     id="followBtn"
                     className="btn btn-primary"
@@ -56,6 +59,7 @@ const Players = props => {
                   >
                     Follow
                   </button>
+                  </div>
                 </td>
               </tr>
             </tbody>

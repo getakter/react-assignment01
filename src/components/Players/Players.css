@@ -1,9 +1,18 @@
-#players {
-    background-color: aliceblue;
-    padding: 20px;
+#players {    padding: 20px;
 }
 
 .randomImage {
     height: 40%;
    
+}
+
+.action {
+    background: #007BFF;
+    border-radius: 3px;
+    color: #fff;
+}
+
+button#followBtn {
+    background: none;
+    border-radius: 0px;
 }
