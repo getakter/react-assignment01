@@ -18,6 +18,10 @@ const Players = props => {
     setCelibrity(newcelibrity);
   };
 
+  const myImage = (id) => {
+   return `https://i.picsum.photos/id/${id}/200/300.jpg`
+  }
+
 
   return (
     <div className="container">
@@ -29,6 +33,7 @@ const Players = props => {
           <thead className="thead-dark">
             <tr>
               <th scope="col">ID#</th>
+              <th>Photo</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Action</th>
@@ -39,9 +44,11 @@ const Players = props => {
             <tbody>
               <tr>
                 <th scope="row">{user.id}</th>
+                <th> <img className="img-thumbnail randomImage" src={myImage(user.id)}></img> </th>
                 <td>{user.name} </td>
                 <td>{user.email}</td>
                 <td>
+                <i class="fa fa-handshake"></i>
                   <button
                     id="followBtn"
                     className="btn btn-primary"
